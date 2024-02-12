@@ -1,31 +1,47 @@
-.switch {
-  position: relative;
-  display: inline-block;
-  width: 50px;
-  height: 40px;
-}
-
-.slider.round {
-  border-radius: 34px;
-  cursor: pointer;
-  background-color: white;
-  -webkit-transition: 4s;
-  transition: 4s;
-}
-
-.slider.round:before {
-  border-radius: 50%;
-  cursor: pointer;
-  background-color: white;
-  -webkit-transition: 4s;
-  transition: 4s;
-}
-
-.slider.round:checked {
-  background-color: black;
-}
-
-.dark {
-  color: white;
+#site-header {
+  display: flex;
+  background: grey;
+  justify-content: space-between;
   color: black;
+  font-size: 20px;
+  padding: 1rem;
+}
+
+#grid-container {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows 500ms ease;
+}
+
+#grid-container > ul {
+  /* overflow necessary for this to work   */
+  overflow: hidden;
+
+  list-style-type: none;
+  padding-left: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+/* this is what we toggle */
+#grid-container.menu-row {
+  grid-template-rows: 1fr;
+}
+
+@media only screen and (min-width: 600px) {
+  #site-header {
+    align-items: center;
+  }
+  #grid-container {
+    grid-template-rows: 1fr;
+  }
+
+  #grid-container > ul {
+    flex-direction: row;
+    align-items: center;
+  }
+  #menu-button-container {
+    display: none;
+  }
 }
