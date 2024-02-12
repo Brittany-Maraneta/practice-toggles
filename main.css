@@ -1,0 +1,31 @@
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 50px;
+  height: 40px;
+}
+
+.slider.round {
+  border-radius: 34px;
+  cursor: pointer;
+  background-color: white;
+  -webkit-transition: 4s;
+  transition: 4s;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+  cursor: pointer;
+  background-color: white;
+  -webkit-transition: 4s;
+  transition: 4s;
+}
+
+.slider.round:checked {
+  background-color: black;
+}
+
+.dark {
+  color: white;
+  color: black;
+}
